@@ -16,3 +16,14 @@ function connect_to_db()
 
     return $conn;
 }
+
+function connect_to_db2()
+{
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, 'together_db', DB_PORT);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    return $conn;
+}
