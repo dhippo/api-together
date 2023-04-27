@@ -32,6 +32,9 @@ function getAllInfoByActivityId ($activityId)
     $conn = connect_to_db2();
     $result = $conn->query("SELECT * FROM activities WHERE id = $activityId");
 
+    var_dump("vardump de result");
+    var_dump($result);
+
     if ($result->num_rows > 0) {
         $activities = [];
         while ($row = $result->fetch_assoc()) {
